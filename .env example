@@ -1,0 +1,38 @@
+# ========================
+# Dingwall Homelab - Environment Variables
+# Copy this file to .env and fill in your values
+# NEVER commit the .env file
+# ========================
+
+# General
+TZ=America/Chicago
+PUID=1000
+PGID=1000
+
+# Paths
+MEDIA_PATH=/path/to/media
+DOWNLOADS_PATH=/path/to/downloads
+CONFIG_PATH=/path/to/configs
+
+# VPN (Gluetun)
+VPN_SERVICE_PROVIDER=your_provider
+VPN_USERNAME=your_username
+VPN_PASSWORD=your_password
+
+# Cloudflare
+CLOUDFLARE_TUNNEL_TOKEN=your_tunnel_token
+
+# Jellyfin
+JELLYFIN_PORT=8096
+
+# qBittorrent
+QBIT_WEBUI_PORT=8080
+
+# Arr Stack
+RADARR_PORT=7878
+SONARR_PORT=8989
+LIDARR_PORT=8686
+JACKETT_PORT=9117
+
+# Home Assistant
+HA_PORT=8123
