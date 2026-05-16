@@ -1,0 +1,19 @@
+# Cloudflare Tunnel Configuration Example
+# Actual config lives on the host — this documents the structure.
+# Tunnel credentials are managed via CLOUDFLARE_TUNNEL_TOKEN in .env
+
+tunnel: YOUR_TUNNEL_UUID
+credentials-file: /path/to/credentials.json
+
+ingress:
+  - hostname: jellyfin.thedingwalls.com
+    service: http://localhost:8096
+
+  - hostname: homeassistant.thedingwalls.com
+    service: http://localhost:8123
+
+  - hostname: requests.thedingwalls.com
+    service: http://localhost:5055
+
+  # Catch-all: return 404 for unmatched hostnames
+  - service: http_status:404
